@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Testes
+cypress/videos/
+cypress/screenshots/
+*.log
+
+# Build Mobile
+*.apk
+*.apks
+*.aab
+build/
+app/build/
+
+# Certificados e segurança
+*.keystore
+*.jks
+
+# IDEs
+.vscode/
+.idea/
+
+# SO / temporários
+.DS_Store
+Thumbs.db
+*.swp
