@@ -1,5 +1,6 @@
 export const config = {
     runner: 'local',
+    port: 4723,
     
     specs: [
         './test/specs/**/*.js'
@@ -12,7 +13,7 @@ export const config = {
         'appium:deviceName': 'ebac',
         'appium:platformVersion': '9.0',
         'appium:automationName': 'UiAutomator2',
-        'appium:app': `${process.cwd()}/app/ebacshop.apks`,
+        'appium:app': `${process.cwd()}/app/ebacshop.apk`,
         'appium:appWaitActivity': '.MainActivity',
         'appium:disableIdLocatorAutocompletion': true,
     }],
