@@ -13,7 +13,7 @@ export const config = {
         'appium:deviceName': 'ebac',
         'appium:platformVersion': '9.0',
         'appium:automationName': 'UiAutomator2',
-        'appium:app': `${process.cwd()}/app/ebacshop.apk`,
+        'appium:app': `${process.cwd()}/app/ebacshop/universal.apk`,
         'appium:appWaitActivity': '.MainActivity',
         'appium:disableIdLocatorAutocompletion': true,
     }],
