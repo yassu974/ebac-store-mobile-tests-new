@@ -26,13 +26,15 @@ export const config = {
         {
             platformName: 'Android',
             'appium:app': 'storage:filename=ebacshop.aab',
-            'appium:deviceName': 'ebac',
-            'appium:platformVersion': '9.0',
+            'appium:deviceName': 'Android GoogleAPI Emulator',
+            'appium:platformVersion': '10',
             'appium:automationName': 'UiAutomator2',
+            'appium:disableIdLocatorAutocompletion': true,
             'sauce:options': {
                 build: 'appium-build-teste-ebacshop',
-                name: '<your test name>',
+                name: 'Ebac Shop Teste',
                 deviceOrientation: 'PORTRAIT',
+                'appiumVersion': "2.0.0"
             },
         }
 ],
