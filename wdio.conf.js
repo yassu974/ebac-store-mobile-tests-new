@@ -1,11 +1,11 @@
 export const config = {
-    //runner: 'local',
-    //port: 4723,
-    user: 'oauth-yassu974-87197',
-    key: '994af757-4f59-4b1d-addf-703cbf7ba1b1',
+    // Config Sauce Labs
+    user: 'oauth-yassu974-f7a79',
+    key: '81e95f0e-1892-46ea-8fb0-ec6945dca211',
     hostname: 'ondemand.us-west-1.saucelabs.com',
     port: 443,
-    baseUrl: 'wd/hub',
+    path: '/wd/hub',
+    region: 'us-west-1',
 
     specs: [
         './test/specs/**/*.js'
@@ -34,10 +34,10 @@ export const config = {
                 build: 'appium-build-teste-ebacshop',
                 name: 'Ebac Shop Teste',
                 deviceOrientation: 'PORTRAIT',
-                'appiumVersion': "2.0.0"
+                'appiumVersion': '2.0.0'
             },
         }
-],
+    ],
 
     logLevel: 'info',
     
@@ -65,5 +65,4 @@ export const config = {
     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
         await driver.takeScreenshot();
     }
-
 }
