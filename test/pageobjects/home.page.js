@@ -1,10 +1,12 @@
-import { $ } from '@wdio/globals'
-
 class HomePage {
-    async openMenu(menu){
-        await $(`id:tab-${menu}`).click()
+    get profileTab() {
+        return $('id=tab-profile');
     }
 
+    async goToProfile() {
+        await this.profileTab.waitForDisplayed({ timeout: 20000 });
+        await this.profileTab.click();
+    }
 }
 
-export default new HomePage();
+export default new HomePage()

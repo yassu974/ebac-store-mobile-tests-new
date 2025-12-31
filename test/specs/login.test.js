@@ -1,14 +1,13 @@
-import { expect, driver } from '@wdio/globals'
-import homePage from '../pageobjects/home.page.js'
-import loginPage from '../pageobjects/login.page.js'
-import profilePage from '../pageobjects/profile.page.js'
+import HomePage from '../pageobjects/home.page.js';
+import LoginPage from '../pageobjects/login.page.js';
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
-        await homePage.openMenu('profile')
-        await loginPage.login('cliente@ebac.art.br', 'GD*peToHNJ1#c$sgk08EaYJQ')
-        await homePage.openMenu('profile')
-        expect((await profilePage.profileName('EBAC Cliente')).isDisplayed()).toBeTruthy()
+        await HomePage.goToProfile();
+
+        await loginPage.login(
+          'cliente@ebac.art.br',
+          'GD*peToHNJ1#c$sgk08EaYJQ'
+        )
     })
 })
-

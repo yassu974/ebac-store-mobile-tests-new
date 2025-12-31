@@ -1,21 +1,25 @@
-import { $ } from '@wdio/globals'
-
 class LoginPage {
-    get email (){
-        return $('id:email')
-    }
-    get password (){
-        return $('android=new UiSelector().text("Password")')
-    }
-    get btnLogin (){
-        return $('~Login')
-    }
+  get emailInput () {
+    return $('id=email')
+  }
 
-    async login(email, password){
-        await this.email.setValue(email)
-        await this.password.setValue(password)
-        await this.btnLogin.click()
-    }
+  get passwordInput () {
+    return $('id=password')
+  }
+
+  get loginButton () {
+    return $('//*[@text="Login"]')
+  }
+
+  async login (email, password) {
+    await this.emailInput.waitForDisplayed({ timeout: 20000 })
+    await this.emailInput.setValue(email)
+
+    await this.passwordInput.setValue(password)
+
+    await this.loginButton.waitForDisplayed({ timeout: 20000 })
+    await this.loginButton.click()
+  }
 }
 
-export default new LoginPage();
+export default new LoginPage()
